@@ -29,10 +29,12 @@ export default function roomIdMessageIdRoute(req, res) {
 
     rooms[roomIdIdx].messages = chatHistory;
 
+    writeDB(chatHistory);
+
     return res.json({ ok: true });
   }
 
   //read value from URL
-  const roomId = req.query.roomId;
-  const messageId = req.query.messageId;
+  //const roomId = req.query.roomId;
+  //const messageId = req.query.messageId;
 }
